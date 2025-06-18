@@ -21,4 +21,4 @@ Ainda vamos continuar com o trabalho mesmo após o término da avaliação, ent�
 É de graça :D
 
 ## 🛜 | Site
-🌄[ccmv.com.br]🌄([ccmv.com.br](https://www.ccmv.com.br/))
+[ccmv.com.br](https://www.ccmv.com.br/)
