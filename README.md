@@ -10,9 +10,13 @@ Ainda vamos continuar com o trabalho mesmo após o término da avaliação, ent�
 
 ## 👥 | Colaboradores
 [Gabriel Schlemper Daniel](https://github.com/Schlemper419)
+
 [Guilherme Freitas Lopes](https://github.com/guiflopes2008)
+
 [Igor Silva Schmitz](https://github.com/Paadrou)
+
 [Prince Ronald da Silva Baptiste](https://github.com/princeronald192)
+
 ### 🌟 | Dê uma estrelinha
 É de graça :D
 
