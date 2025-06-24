@@ -1,0 +1,18 @@
+.navbar .container-fluid{
+    background-color: #E6F7EE;
+}
+
+.navbar .collapse{
+    display: flex;
+    justify-content: center;
+}
+
+ul li{
+    gap: 30px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
