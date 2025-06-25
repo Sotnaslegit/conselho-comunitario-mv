@@ -1,0 +1,46 @@
+.navbar {
+    background-color: #E6F7EE;
+    .collapse{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+ul li{
+    gap: 30px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #A39F9F;
+    height: 60px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.logo {
+    width: 90px; /* ou qualquer valor desejado */
+    height: auto; /* mantém a proporção da imagem */
+  }
+
+  .home{
+    width: 35px;
+  }
+  
+
+@media (max-width:768px){
+    .navbar{
+        .collapse{
+       
+        justify-content: start;
+    }  
+    }
+
+}
+
