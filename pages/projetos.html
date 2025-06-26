@@ -8,259 +8,241 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/projeto.css">
-    <style>
-    .card-img-top {
-    display: block;          /* para poder usar margin auto */
-    max-width: 650px;
-    width: 100%;             /* para respeitar o max-width e ajustar responsivo */
-    height: auto;
-    margin: 0 auto 1rem auto; /* centraliza horizontalmente e dá margem embaixo */
-    object-fit: contain;
-    border-radius: 8px;
-    float: none;             /* remove float se existir */
-}
 
-
-        .card-body {
-            overflow: hidden;
-        }
-
-        .card {
-            background-color: #D9FFEB;
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: flex-start;
-            padding: 10px;
-        }
-
-        @media (max-width: 576px) {
-            .card-img-top {
-                float: none;
-                display: block;
-                margin: 0 auto 1rem auto;
-                max-width: 100%;
-            }
-
-            .card.jiu-jitsu .card-img-top {
-                max-width: 100%;
-                float: none;
-                margin: 0 auto;
-                display: block;
-            }
-
-            .card.jiu-jitsu {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .card {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../img/centro-comunitario.png" alt=""> </a>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img class="navbar-brand" src="../img/centro-comunitario.png" alt="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a href="#"><img class="nav-cas" src="../img/img/casinha.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre nós</a>
+                        </li>
+                        <a class="nav-link" href="#">Projetos</a>
+                        </li>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="../img/img/casinha.svg" alt=""></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre nós</a>
-                    </li>
-                    <a class="nav-link active" aria-current="page" href="#">Projetos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Atividades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Salão</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Notícias</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Atividades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Salão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Notícias</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
 
-    <h1>PROJETOS</h1>
+        <h1>PROJETOS</h1>
 
 
-    </head>
+        </head>
 
-    <body>
+        <body>
 
 
-        <div class="container my-4">
-            <div class="row g-4">
+            <div class="container my-4">
+                <div class="row g-4">
 
-                <!-- Card 1 - Jiu Jitsu -->
-                <div class="col-12">
-                    <div class="card h-100 jiu-jitsu">
-                        <img src="../img/img/jss.jpg" class="card-img-top" alt="Escola de Jiu Jitsu">
-                        <div class="card-body">
-                            <h5 class="card-title">Jiu Jitsu</h5>
-                            <p>De segunda a quinta-feira, das 19:00 às 22:00h<br> Sala em frente à secretaria do Centro
-                                Comunitário Monte Verde II<br> Crianças, Jovens e Adultos</p>
-                            <p><strong>Pagamento direto com o professor</strong></p>
-                            <p>Responsável: Fabiano<br>📞 48 99844-4332</p>
+                    <!-- Card 1 - Jiu Jitsu -->
+                    <div class="card-direito col-8">
+                        <div class="card h-100 jiu-jitsu">
+                            <img src="../img/img/jss.jpg" class="card-img-top" alt="Escola de Jiu Jitsu">
+                            <div class="card-body">
+                                <h5 class="card-title">Jiu Jitsu</h5>
+                                <p>De segunda a quinta-feira, das 19:00 às 22:00h<br> Sala em frente à secretaria do
+                                    Centro
+                                    Comunitário Monte Verde II<br> Crianças, Jovens e Adultos</p>
+                                <p><strong>Pagamento direto com o professor</strong></p>
+                                <p>Responsável: Fabiano<br>📞 48 99844-4332</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <!-- Card 2 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/FORMIGUINHA.svg" class="rum" alt="Projeto Formiguinha">
-                        <div class="card-body">
-                            <h5 class="card-title">Projeto Formiguinha</h5>
-                            <p>De segunda à quinta-feira, das 14:00 às 17:00h<br> Na antiga portaria policial da dona
-                                Onil Ferreira</p>
-                            <p><strong>Gratuito</strong><br> Responsável: Ângela<br>📞 (49) 98418-7701<br>📸
-                                @formiguinhas.mv</p>
+                    <!-- Card 2 -->
+                    <div class="card-esquerdo col-8 ">
+                        <div class="card h-100">
+                            <img src="../img/img/FORMIGUINHA.svg" class="rum" alt="Projeto Formiguinha">
+                            <div class="card-body">
+                                <h5 class="card-title">Projeto Formiguinha</h5>
+                                <p>De segunda à quinta-feira, das 14:00 às 17:00h<br> Na antiga portaria policial da
+                                    dona
+                                    Onil Ferreira</p>
+                                <p><strong>Gratuito</strong><br> Responsável: Ângela<br>📞 (49) 98418-7701<br>📸
+                                    @formiguinhas.mv</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 3 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/bingo.svg" class="rum" alt="Bingo">
-                        <div class="card-body">
-                            <h5 class="card-title">Bingo</h5>
-                            <p>Todas as terças-feiras, das 13:30 às 17:30hs<br> No salão do Centro Comunitário Monte
-                                Verde</p>
-                            <p><strong>Gratuito</strong><br> Responsável: Dona Maria Castilho<br>📞 48 9115-9253</p>
+                    <!-- Card 3 -->
+                    <div class="card-direito col-8">
+                        <div class="card h-100">
+                            <img src="../img/img/bingo.svg" class="rum" alt="Bingo">
+                            <div class="card-body">
+                                <h5 class="card-title">Bingo</h5>
+                                <p>Todas as terças-feiras, das 13:30 às 17:30hs<br> No salão do Centro Comunitário Monte
+                                    Verde</p>
+                                <p><strong>Gratuito</strong><br> Responsável: Dona Maria Castilho<br>📞 48 9115-9253</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 4 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/capoeira.svg" class="rum" alt="Capoeira">
-                        <div class="card-body">
-                            <h5 class="card-title">Capoeira</h5>
-                            <p>Terças e quintas, das 19:00 às 22:00hs<br> No salão do Centro Comunitário Monte Verde</p>
-                            <p><strong>Gratuito</strong><br> Responsável: Mestre Dan<br>📞 48 99152-7069</p>
+                    <!-- Card 4 -->
+                    <div class="card-esquerdo col-8">
+                        <div class="card h-100">
+                            <img src="../img/img/capoeira.svg" class="rum" alt="Capoeira">
+                            <div class="card-body">
+                                <h5 class="card-title">Capoeira</h5>
+                                <p>Terças e quintas, das 19:00 às 22:00hs<br> No salão do Centro Comunitário Monte Verde
+                                </p>
+                                <p><strong>Gratuito</strong><br> Responsável: Mestre Dan<br>📞 48 99152-7069</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 5 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/dance.svg" class="rum" alt="FitDance">
-                        <div class="card-body">
-                            <h5 class="card-title">FitDance</h5>
-                            <p>Terças e quintas, das 19:00 às 22:00hs<br> No salão do Centro Comunitário Monte Verde</p>
-                            <p><strong>Gratuito</strong><br> Responsável: Mestre Dan<br>📞 48 99152-7069</p>
+                    <!-- Card 5 -->
+                    <div class="card-direito col-8">
+                        <div class="card h-100">
+                            <img src="../img/img/dance.svg" class="rum" alt="FitDance">
+                            <div class="card-body">
+                                <h5 class="card-title">FitDance</h5>
+                                <p>Terças e quintas, das 19:00 às 22:00hs<br> No salão do Centro Comunitário Monte Verde
+                                </p>
+                                <p><strong>Gratuito</strong><br> Responsável: Mestre Dan<br>📞 48 99152-7069</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 6 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/pilates.svg" class="rum" alt="Pilates com Vagner">
-                        <div class="card-body">
-                            <h5 class="card-title">Pilates com Vagner</h5>
-                            <p>Terças e quintas-feiras<br> Pilates: 07:00 às 08:00hs / Cond. físico: 08:00 às
-                                09:00hs<br> No Centro Comunitário Monte Verde</p>
-                            <p><strong>Pagamento com o professor</strong><br> Responsável: Vagner Amarante<br>📞 (48)
-                                99947-7480</p>
+                    <!-- Card 6 -->
+                    <div class="card-esquerdo col-8">
+                        <div class="card h-100">
+                            <img src="../img/img/pilates.svg" class="rum" alt="Pilates com Vagner">
+                            <div class="card-body">
+                                <h5 class="card-title">Pilates com Vagner</h5>
+                                <p>Terças e quintas-feiras<br> Pilates: 07:00 às 08:00hs / Cond. físico: 08:00 às
+                                    09:00hs<br> No Centro Comunitário Monte Verde</p>
+                                <p><strong>Pagamento com o professor</strong><br> Responsável: Vagner Amarante<br>📞
+                                    (48)
+                                    99947-7480</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 7 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/condicionamento.svg" class="rum" alt="Pilates com Deyve">
-                        <div class="card-body">
-                            <h5 class="card-title">Pilates com Deyve</h5>
-                            <p>Terças e quintas-feiras<br> Pilates: 07:00 às 08:00hs / Cond. físico: 08:00 às
-                                09:00hs<br> No salão do Conselho Comunitário</p>
-                            <p><strong>Pagamento com o professor</strong><br> Responsável: Deyve<br>📞 (48) 99947-7480
-                            </p>
+                    <!-- Card 7 -->
+                    <div class="card-direito col-8">
+                        <div class="card h-100">
+                            <img src="../img/img/condicionamento.svg" class="rum" alt="Pilates com Deyve">
+                            <div class="card-body">
+                                <h5 class="card-title">Pilates com Deyve</h5>
+                                <p>Terças e quintas-feiras<br> Pilates: 07:00 às 08:00hs / Cond. físico: 08:00 às
+                                    09:00hs<br> No salão do Conselho Comunitário</p>
+                                <p><strong>Pagamento com o professor</strong><br> Responsável: Deyve<br>📞 (48)
+                                    99947-7480
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 8 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/bale.svg" class="rum" alt="Balé">
-                        <div class="card-body">
-                            <h5 class="card-title">Balé</h5>
-                            <p>Segunda a sexta, diversos horários, das 13:00 às 21:00hs<br> Sala em frente à secretaria
-                                do Centro Comunitário</p>
-                            <p><strong>Gratuito</strong><br> Responsável: Larissa<br>📞 48 99167-6110</p>
+                    <!-- Card 8 -->
+                    <div class="card-esquerdo col-8">
+                        <div class="card h-100">
+                            <img src="../img/img/bale.svg" class="rum" alt="Balé">
+                            <div class="card-body">
+                                <h5 class="card-title">Balé</h5>
+                                <p>Segunda a sexta, diversos horários, das 13:00 às 21:00hs<br> Sala em frente à
+                                    secretaria
+                                    do Centro Comunitário</p>
+                                <p><strong>Gratuito</strong><br> Responsável: Larissa<br>📞 48 99167-6110</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 9 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/guga.svg" class="rum" alt="Instituto Guga Kuerten">
-                        <div class="card-body">
-                            <h5 class="card-title">Instituto Guga Kuerten</h5>
-                            <p>Quartas e sextas-feiras<br> Das 08:30 às 11:30hs e 13:30 às 16:30hs<br> No salão do CCMV
-                                e quadra sintética</p>
-                            <p><strong>Pagamento com o professor</strong><br> Responsável: Deyve<br>📞 (48)
-                                99947-7480<br>📸 @institutogugakuerten</p>
+                    <!-- Card 9 -->
+                    <div class="card-direito col-8">
+                        <div class="card h-100">
+                            <img src="../img/img/guga.svg" class="rum" alt="Instituto Guga Kuerten">
+                            <div class="card-body">
+                                <h5 class="card-title">Instituto Guga Kuerten</h5>
+                                <p>Quartas e sextas-feiras<br> Das 08:30 às 11:30hs e 13:30 às 16:30hs<br> No salão do
+                                    CCMV
+                                    e quadra sintética</p>
+                                <p><strong>Pagamento com o professor</strong><br> Responsável: Deyve<br>📞 (48)
+                                    99947-7480<br>📸 @institutogugakuerten</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 10 -->
-                <div class="col-12">
-                    <div class="card h-100">
-                        <img src="../img/img/bairro.svg" class="rum" alt="Programa Educacional PMF">
-                        <div class="card-body">
-                            <h5 class="card-title">Programa Educacional PMF</h5>
-                            <p>Segunda a sexta-feira, das 08:00 às 19:30hs<br> No CCMV e quadras da comunidade</p>
-                            <p><strong>Gratuito</strong><br> Responsável: Latronico<br>📞 48 9635-4780<br>📸
-                                @bairroeducador_monteverde</p>
+                    <!-- Card 10 -->
+                    <div class="card-esquerdo col-9">
+                        <div class="card h-100">
+                            <img src="../img/img/bairro.svg" class="rum" alt="Programa Educacional PMF">
+                            <div class="card-body">
+                                <h5 class="card-title">Programa Educacional PMF</h5>
+                                <p>Segunda a sexta-feira, das 08:00 às 19:30hs<br> No CCMV e quadras da comunidade</p>
+                                <p><strong>Gratuito</strong><br> Responsável: Latronico<br>📞 48 9635-4780<br>📸
+                                    @bairroeducador_monteverde</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    </div>
+                    </div>
 
-                <footer class="footer mt-5">
-                    <div class="container text-center py-4">
-                        <div class="mb-3">
-                            <a href="https://facebook.com" target="_blank" class="social-icon">
-                                <i class="fab fa-facebook-f"></i>
-                                <img src="../img/img/face.svg" alt="">
-                            </a>
-                            <a href="https://wa.me/5555555555" target="_blank" class="social-icon">
-                                <i class="fab fa-whatsapp"></i>
-                                <img src="../img/img/wpp.svg" alt="">
-                            </a>
+                    <footer class="footer-custom py-5 text-white">
+                        <div class="container">
+                            <div class="baixo d-flex justify-content-around">
+                
+                
+                                <div class=" mb-4">
+                                    <h5>Redes Sociais</h5>
+                
+                                    <div class="social-icons">
+                                        <a href="#"><img src="../img/img/face.svg" alt=""></a>
+                                        <a href="#"><img src="../img/img/wpp.svg" alt=""></a>
+                                    </div>
+                                </div>
+                
+                                <!-- Coluna 2 - Endereço com Mapa -->
+                                <div class=" mb-4">
+                                    <h5>Onde estamos</h5>
+                                    <p>R. do Guaramirim, 200 <br> Monte Verde, Florianópolis - SC, 88032-480
+                                    </p>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.15589499155!2d-48.497485894009635!3d-27.55767184350902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952738a3a215baef%3A0x9ad1986d8bc6359!2sConselho%20Comunit%C3%A1rio%20Monte%20Verde!5e0!3m2!1spt-BR!2sbr!4v1750897792662!5m2!1spt-BR!2sbr" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                
+                                <!-- Coluna 3 - Contato -->
+                                <div class=" mb-4">
+                                    <h5>Fale Conosco</h5>
+                                    <p>📞 (48) 9999-9999<br> ✉️monteverde@gmail.com.br</p>
+                                    <h6>Telefones</h6>
+                                    <ul class="list-unstyled">
+                                        <li>📞 (48) 9999-9999</li>
+                                        <li>📞 (48) 9999-9999</li>
+                                        <li>📞 (48) 9999-9999</li>
+                                        <li>📞 (48) 9999-9999</li>
+                                    </ul>
+                                </div>
+                
+                            </div>
                         </div>
-
+                    </footer>
                         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
                             integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
                             crossorigin="anonymous"></script>
-    </body>
+        </body>
 
 </html>
