@@ -15,18 +15,39 @@ h2{
     justify-content: center;
 }
 
-footer{
-    background-color: #A39F9F;
-    height: 60px;
-}
+.footer-custom {
+    background-color: #339a73; 
+    color: white;
+  }
+  
+  .footer-custom h5, .footer-custom h6 {
+    font-weight: bold;
+  }
+  
+  .footer-custom a {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .footer-custom a:hover {
+    color: #cce5ff;
+  }
+  
+  .footer-custom .social-icons i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+
 
 p {
     font-size: 16px;
 }
 
 .logo {
-    width: 90px; /* ou qualquer valor desejado */
-    height: auto; /* mantém a proporção da imagem */
+    width: 90px;
+    height: auto; 
   }
 
   .home{
@@ -39,8 +60,11 @@ p {
         .collapse{
        
         justify-content: start;
-    }  
+    } } 
+    .baixo{
+        flex-direction: column;
     }
 
 }
+
 
