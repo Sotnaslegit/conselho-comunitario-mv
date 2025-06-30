@@ -1,0 +1,9 @@
+@import url(root.css);
+
+main{
+    background: var(--back-color);
+}
+
+main .container{
+
+}
