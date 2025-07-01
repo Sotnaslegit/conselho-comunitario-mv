@@ -1,6 +1,5 @@
 nav{
     background: var(--primary-color);
-    margin-bottom: 10%;
     .with-border{
         border-left: #35403A solid 2px;
     }

@@ -10,33 +10,37 @@
   <body>
 
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="images/icon/logo.png" width="50" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <div class="container-fluid">
+          <img class="logo" src="assets/imgs/logo.png" alt="logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
           </button>
+
+
+
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><img src="images/icon/casinha.png" alt=""></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">NOTÍCIAS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">PROJETOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#">SOBRE NÓS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#">SALÃO</a>
-              </li>
-            </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a href="#"><img class="home" src="assets/imgs/icons/home.svg" alt=""></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">SOBRE NÓS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">PROJETOS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">SALÃO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">NOTÍCIAS</a>
+                  </li>
+
+              </ul>
           </div>
-        </div>
-      </nav>  
-      
+      </div>
+  </nav>
       <!-- FIM: NAV -->
 
     <main>
@@ -73,7 +77,7 @@
 
         <div class="container">
             <div class="d-flex justify-content-center">
-                  <img src="images/logo-texto.png" width="365"  alt="">
+                  <img src="assets/imgs/logo-texto.png" width="365"  alt="">
             </div>
         </div>
         
@@ -82,7 +86,7 @@
             <p class="text-center">Aqui você vai encontrar:
               <br><br>
               Projetos gratuitos ou a preço popular — pra toda comunidade!
-              Notícias fresquinhas sobre bairro
+              Notícias sobre bairro
               <br><br>
               Uma página "Sobre Nós", contando a história incrível do nosso bairro Monte Verde
               <br><br>
@@ -93,17 +97,43 @@
 
     <!-- FIM: main -->
 
-    <footer>
+    <footer class="footer-custom py-5 text-white">
       <div class="container">
-        <div class="row">
-          <div class="d-flex justify-content-center">     
-            <a href="#"><img src="images/icon/uatzap.png" alt=""></a>
-            <a href=""><img src="images/icon/facebuk.png" alt=""></a>
-         
+          <div class="baixo d-flex justify-content-around">
+
+
+              <div class=" mb-4">
+                  <h5>Redes Sociais</h5>
+
+                  <div class="social-icons">
+                      <a href="#"><img src="assets/imgs/icons/whatsapp.svg" alt=""></a>
+                      <a href="#"><img src="assets/imgs/icons/facebook.svg" alt=""></a>
+                  </div>
+              </div>
+
+              <!-- Coluna 2 - Endereço com Mapa -->
+              <div class=" mb-4">
+                  <h5>Onde estamos</h5>
+                  <p>R. do Guaramirim, 200 <br> Monte Verde, Florianópolis - SC, 88032-480
+                  </p>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.15589499155!2d-48.497485894009635!3d-27.55767184350902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952738a3a215baef%3A0x9ad1986d8bc6359!2sConselho%20Comunit%C3%A1rio%20Monte%20Verde!5e0!3m2!1spt-BR!2sbr!4v1750897792662!5m2!1spt-BR!2sbr" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <!-- Coluna 3 - Contato -->
+              <div class=" mb-4">
+                  <h5>Fale Conosco</h5>
+                  <p>📞 (48) 9999-9999<br> ✉️monteverde@gmail.com.br</p>
+                  <h6>Telefones</h6>
+                  <ul class="list-unstyled">
+                      <li>📞 (48) 9999-9999</li>
+                      <li>📞 (48) 9999-9999</li>
+                      <li>📞 (48) 9999-9999</li>
+                      <li>📞 (48) 9999-9999</li>
+                  </ul>
+              </div>
           </div>
-        </fiv>
       </div>
-    </footer>
+  </footer>
 
     <!-- FIM: footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

@@ -1,0 +1,7 @@
+.navbar {
+    background-color: #E6F7EE;
+    .collapse{
+        display: flex;
+        justify-content: center;
+    }
+}

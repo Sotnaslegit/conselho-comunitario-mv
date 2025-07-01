@@ -1,9 +1,12 @@
-
 @import url(components/reset.css);
-
-@import url(components/sobre-nos.css);
 @import url(components/root.css);
 
-@import url(components/home.css);
+@import url(components/nav.css);
+@import url(components/footer.css);
+
+@import url(components/index.css);
+
+@import url(components/sobre-nos.css);
+
 
 @import url(components/noticias.css);
