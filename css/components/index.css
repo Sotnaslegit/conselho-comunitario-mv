@@ -1,0 +1,12 @@
+@import url(root.css);
+
+main{
+    background: var(--back-color);
+
+    .container{
+        .text-center{
+            font-size: 25px;
+        }
+    }
+}
+
