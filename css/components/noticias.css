@@ -1,20 +1,22 @@
-nav{
-    background: var(--primary-color);
-    margin-bottom: 10%;
-    .with-border{
-        border-left: #35403A solid 2px;
-    }
-}
-
 body{
     background-color: var(--back-color) !important;
     h1{
         margin: 10%;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    h2{
+        margin-top: 1%;
+        font-size: 24px;
+    }
+    p{
+        font-size: 12px;
     }
     .card{
         background: #D9FFEB;
         margin: 0 5% 15%;
-        box-shadow: #00000065 0 3px 10px;
+        padding: 1%;
+        box-shadow: #00000065 0 3px 5px;
     }
 }
 
