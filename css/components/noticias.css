@@ -8,7 +8,7 @@ nav{
 body{
     background-color: var(--back-color) !important;
     h1{
-        margin: 10%;
+        margin: 5%;
     }
     .card{
         background: #D9FFEB;
