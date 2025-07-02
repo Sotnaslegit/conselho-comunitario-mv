@@ -1,7 +1,7 @@
 @import url(root.css);
 
-main{
-    background: var(--back-color);
+body{
+    background: var(--back-color) !important;
 
     .container{
         .text-center{

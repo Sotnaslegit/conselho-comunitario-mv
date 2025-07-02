@@ -1,5 +1,6 @@
 .navbar {
     background-color: #E6F7EE;
+    margin-bottom: 5%;
     .collapse{
         display: flex;
         justify-content: center;
