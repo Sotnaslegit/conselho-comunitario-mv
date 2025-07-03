@@ -28,7 +28,7 @@ body.projetos{
   }
   
   .card {
-    background-color: #D9FFEB;
+    background-color: #66CC96;
     border-radius: 16px;
     padding: 20px;
     border: none;
@@ -187,7 +187,7 @@ body.projetos{
         }
   
         .card {
-            background-color: #D9FFEB;
+            background-color: #66CC96;
             border: none;
             border-radius: 16px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -225,7 +225,7 @@ body.projetos{
   
        
     .card {
-      background-color: #D9FFEB;
+      background-color: #66CC96;
       border-radius: 16px;
       padding: 16px;
       border: none;

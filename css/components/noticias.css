@@ -17,12 +17,17 @@ body.noticias {
         display: flex;
         justify-content: center;
         .card {
-            background: #D9FFEB;
+            background: #66CC96;
             margin: 0 5% 15%;
             box-shadow: #00000065 0 3px 10px;
             padding: 1%;
             width: 50%;
+            transition: transform 0.3s ease;
         }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 #00000065 0 3px 10px;
+          }
     }
 }
 
