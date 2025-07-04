@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Raleway", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Montserrat", sans-serif; */
+
+.primary-font{
+    font-family: "Raleway", sans-serif; 
+}
+
+.secondary-font{
+    font-family: "Montserrat", sans-serif;
+}
+
+h5{
+    font-family: "Raleway", sans-serif; 
+
+}
+
