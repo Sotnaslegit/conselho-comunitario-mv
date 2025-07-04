@@ -6,3 +6,15 @@
         justify-content: center;
     }
 }
+
+.navbar .nav-link {
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+
