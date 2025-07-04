@@ -4,21 +4,6 @@ body.projetos{
   margin: 0;
   padding: 0;
   
-  .navbar-brand{
-    width: 90px;
-  }
-  
-  .navbar{
-    background-color: #E6F7EE;
-    .collapse{
-      /* display: none; */
-      justify-content: center;
-    }
-  }
-  
-  .nav-cas{
-    width: 35px;
-  }
   
   h1 {
     text-align: center;
