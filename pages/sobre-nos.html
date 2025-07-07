@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CCMV</title>
-    <link rel="shortcut icon" href="../assets/imgs/logo-sem-texto.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imgs/logo-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -14,40 +14,41 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <img class="logo" src="../assets/imgs/logo.png" alt="logo">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-    
-    
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="../index.html"><img class="home" src="../assets/imgs/icons/home.svg" alt=""></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="sobre-nos.html">SOBRE NÓS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="projetos.html">PROJETOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="salao.html">SALÃO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="noticias.html">NOTÍCIAS</a>
-                        </li>
-    
-                    </ul>
-                </div>
-                <div class="espaco">
-            
-                </div>
-            </div>
-        </nav>
+    <div class="container-fluid">
+      <img class="logo" src="../assets/imgs/logo-icon.png" alt="logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="../index.html"><img class="navIcon"  src="../assets/imgs/icons/home.svg" alt="">INICIO</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="sobre-nos.html"><img class="navIcon"  src="../assets/imgs/icons/sobre-nos.svg" alt="">SOBRE NÓS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="projetos.html"><img class="navIcon"  src="../assets/imgs/icons/fitness.svg" alt="">PROJETOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="salao.html"> <img class="navIcon"  src="../assets/imgs/icons/salao.svg" alt="">SALÃO</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link active" aria-current="page" href="noticias.html"><img class="navIcon" src="../assets/imgs/icons/megaphone.svg" alt="">NOTÍCIAS</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="espaco">
+
+      </div>
+    </div>
+  </nav>
     </header>
 
     <main>
@@ -59,13 +60,13 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="https://placehold.co/600x400" class="d-block w-100" alt="https://placehold.co/600x400">
+                      <img src="../assets/imgs/quadra-lateral.JPG" class="d-block w-100" alt="https://placehold.co/600x400">
                     </div>
                     <div class="carousel-item">
-                      <img src="https://placehold.co/600x400" class="d-block w-100" alt="https://placehold.co/600x400">
+                      <img src="../assets/imgs/academia.JPG" class="d-block w-100" alt="https://placehold.co/600x400">
                     </div>
                     <div class="carousel-item">
-                      <img src="https://placehold.co/600x400" class="d-block w-100" alt="https://placehold.co/600x400">
+                      <img src="../assets/imgs/alongamento.JPG" class="d-block w-100" alt="https://placehold.co/600x400">
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -90,7 +91,7 @@
                     <h2 class="primary-font">SOBRE NÓS</h2>
                     <p class="secondary-font">Em 15/04/1981, o Centro Comunitário do Monte Verde é
                         fundado pelo morador Osni Ferreira. O projeto que nasceu
-                        com o intuíto de auxiliar os moradores hoje conta com mais de 11 mil participantes e mais de 10
+                        com o intuíto de auxiliar os moradores hoje conta com maisde 11 mil participantes e mais de 10
                         projetos
                         e
                         atividades.</p>
@@ -163,10 +164,14 @@
                 <!-- Coluna 3 - Contato -->
                 <div class=" mb-4">
                     <h5>Fale Conosco:</h5>
-                    <label for=""><img src="../assets/imgs/icons/call.svg" alt=""></label>
-                    <p> (48) 98501-5251 </p>
-                    <label for=""><img src="../assets/imgs/icons/email.svg" alt=""> </label>
-                    <p> ccmv.adm@gmail.com </p>
+                    <div class="ctt">
+            <label for=""><img src="../assets/imgs/icons/call.svg" alt=""></label>
+            <p> (48) 98501-5251 </p>
+          </div>
+          <div class="ctt">
+            <label for=""><img src="../assets/imgs/icons/email.svg" alt=""> </label>
+            <p> ccmv.adm@gmail.com </p>
+          </div>
                   </div>
 
             </div>

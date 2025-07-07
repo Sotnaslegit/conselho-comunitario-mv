@@ -9,9 +9,13 @@ Devido a Situação de Aprendizagem (SA) desse semestre, cujo o tema era ONG's, 
 Ainda vamos continuar com o trabalho mesmo após o término da avaliação, então fique de olho nas próximas atualizações :D
 
 ## 👥 | Colaboradores
+[Erick Rodrigues dos Santos](https://github.com/Sotnaslegit)
+
 [Gabriel Schlemper Daniel](https://github.com/Schlemper419)
 
 [Guilherme Freitas Lopes](https://github.com/guiflopes2008)
+
+[Iasmin Barbosa Souto](https://github.com/iasminbarb0sa1)
 
 [Igor Silva Schmitz](https://github.com/Paadrou)
 

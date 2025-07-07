@@ -9,7 +9,7 @@ nav {
 body.noticias {
     background-color: var(--back-color) !important;
 
-    h1 {
+    h1,h2,h3 {
         margin: 5%;
     }
 

@@ -32,3 +32,13 @@
   vertical-align: middle;
   margin-right: 8px;
 }
+
+.ctt{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  p{
+    margin-bottom: 0;
+  }
+}
