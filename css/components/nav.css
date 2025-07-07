@@ -14,8 +14,19 @@
 }
 
 .navbar .nav-link:hover {
-    color: #fff;
+    color: #fff !important;
     transform: translateY(-2px);
 }
 
 
+.navIcon{
+    width: 25px;
+    margin: 0 10px ;
+}
+
+@media (max-width:768px){
+    .navIcon{
+    width: 25px;
+
+}
+}
