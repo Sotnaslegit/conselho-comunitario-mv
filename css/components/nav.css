@@ -2,7 +2,8 @@
     background-color: #66CC96;
     margin-bottom: 5%;
     box-shadow: #00000031 0 3px 10px;
-    .collapse{
+
+    .collapse {
         display: flex;
         justify-content: center;
     }
@@ -19,14 +20,17 @@
 }
 
 
-.navIcon{
+.navIcon {
     width: 25px;
-    margin: 0 10px ;
+    margin: 0 10px;
 }
 
-@media (max-width:768px){
-    .navIcon{
-    width: 25px;
+@media (max-width:768px) {
+    .navIcon {
+        width: 25px;
+    }
 
-}
+    .imgLogo {
+        width: 245px;
+    }
 }
