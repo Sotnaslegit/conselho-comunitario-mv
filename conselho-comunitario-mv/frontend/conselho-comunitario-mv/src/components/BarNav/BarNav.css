@@ -33,4 +33,11 @@
     .imgLogo {
         width: 245px;
     }
+
+    .navbar {
+        .collapse {
+
+            justify-content: start;
+        }
+    }
 }

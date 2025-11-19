@@ -1,3 +1,7 @@
+import parquinho from '../../assets/parquinho.JPG'
+import campoCima from '../../assets/campo-cima.JPG'
+import quadra from '../../assets/quadra.JPG'
+
 const HomePage = () => {
     return (
         <>
@@ -15,13 +19,13 @@ const HomePage = () => {
                             <div id="carouselExampleFade" className="carousel slide carousel-fade">
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">
-                                        <img src="assets/imgs/parquinho.JPG" className="d-block w-100" alt="https://placehold.co/600x400" />
+                                        <img src={parquinho} className="d-block w-100" alt="" />
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="assets/imgs/campo-cima.JPG" className="d-block w-100" alt="https://placehold.co/600x400" />
+                                        <img src={campoCima} className="d-block w-100" alt="" />
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="assets/imgs/quadra.JPG" className="d-block w-100" alt="https://placehold.co/600x400" />
+                                        <img src={quadra} className="d-block w-100" alt="" />
                                     </div>
                                 </div>
                                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -39,8 +43,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-
-
 
             <div className="container">
                 <div className="mb-5">

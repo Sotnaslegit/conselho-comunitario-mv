@@ -1,0 +1,25 @@
+.abtus {
+
+    ul li {
+        gap: 30px;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 90px;
+        height: auto;
+    }
+
+    
+
+        
+
+    }

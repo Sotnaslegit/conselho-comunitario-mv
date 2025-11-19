@@ -1,0 +1,263 @@
+body.projetos{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    
+    
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .card {
+      background-color: #66CC96;
+      border-radius: 16px;
+      padding: 20px;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    }
+    
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-title {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .card-text {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    
+    
+    .rum {
+      width: 150px;
+      /* Define um tamanho fixo para a imagem */
+      height: auto;
+      /* Mantém a proporção */
+      display: inline-block;
+      margin-right: 15px;
+      /* Espaço entre a imagem e o texto */
+                
+      /* Faz a imagem flutuar à esquerda */
+    
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+        flex-shrink: 0;
+    
+      
+    }
+    
+    .card-body {
+      overflow: hidden;
+      /* Para conter o float e evitar quebra no layout */
+    }
+    
+    
+    
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      max-height: 350px; /* aumentei de 300 para 350 */
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    @media  (max-width: 768px) {
+      .card-img-top {
+        max-width: 300px;
+      }
+    }
+    
+    
+    /* Footer */
+    /* Footer */
+    .footer-custom {
+      background-color: #339a73;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    .footer-custom h5,
+    .footer-custom h6 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .footer-custom a {
+      color: white;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .footer-custom a:hover {
+      color: #cce5ff;
+    }
+    
+    .footer-custom .social-icons i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    /* Logo e home */
+    .logo {
+      width: 90px;
+      height: auto;
+    }
+    
+    .home {
+      width: 35px;
+      height: auto;
+    }
+    
+    /* Parágrafos */
+    .footer-custom p {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .footer-custom {
+        text-align: center;
+      }
+    
+      .footer-custom .social-icons {
+        margin-top: 10px;
+      }
+    
+      .baixo {
+        flex-direction: column !important;
+        align-items: center;
+      }
+    
+      .navbar .collapse {
+        justify-content: flex-start;
+      }
+    }
+    
+    
+        
+    
+    
+    .card-img-top {
+      display: block;          /* para poder usar margin auto */
+      max-width: 650px;
+      width: 100%;             /* para respeitar o max-width e ajustar responsivo */
+      height: auto;
+      margin: 0 auto 1rem auto; /* centraliza horizontalmente e dá margem embaixo */
+      object-fit: contain;
+      border-radius: 8px;
+      float: none;             /* remove float se existir */
+    }
+    
+    
+          .card-body {
+              overflow: hidden;
+          }
+    
+          .card {
+              background-color: #66CC96;
+              border: none;
+              border-radius: 16px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              display: flex;
+              align-items: flex-start;
+              padding: 10px;
+          }
+    
+          @media (max-width: 576px) {
+              .card-img-top {
+                  float: none;
+                  display: block;
+                  margin: 0 auto 1rem auto;
+                  max-width: 100%;
+              }
+    
+              .card.jiu-jitsu .card-img-top {
+                  max-width: 100%;
+                  float: none;
+                  margin: 0 auto;
+                  display: block;
+              }
+    
+              .card.jiu-jitsu {
+                  flex-direction: column;
+                  align-items: center;
+                  text-align: center;
+              }
+    
+              .card {
+                  flex-direction: column;
+                  text-align: center;
+              }
+          }
+    
+         
+      .card {
+        background-color: #66CC96;
+        border-radius: 16px;
+        padding: 16px;
+        border: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    
+      .card + .card {
+        margin-top: 20px;
+      }
+    
+      .card-img-top {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 10px;
+        margin-bottom: 12px;
+      }
+    
+      .rum {
+        width: 100%;
+        height: auto;
+        max-width: 160px;
+        object-fit: contain;
+        border-radius: 10px;
+        float: right;
+        margin-left: 1rem;
+      }
+    
+      .card-body {
+        overflow: hidden;
+      }
+    
+      @media (max-width: 768px) {
+        .rum {
+          float: none;
+          display: block;
+          margin: 0 auto 1rem auto;
+        }
+    
+        .card {
+          text-align: center;
+        }
+      }
+    
+      .card-direito {
+        margin-left: auto;
+      }
+  }
+  
