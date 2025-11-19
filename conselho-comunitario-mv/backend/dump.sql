@@ -5,8 +5,7 @@ USE db_mv;
 CREATE TABLE `user` (
 	id_user INT PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(250),
-    `password` VARCHAR(100),
-    email VARCHAR(200) UNIQUE
+    `password` VARCHAR(100)
 );
 
 CREATE TABLE news (
