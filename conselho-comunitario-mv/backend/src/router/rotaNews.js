@@ -1,5 +1,5 @@
 import express from "express";
-import { db }from "../config/db.js";
+import { db } from "../config/db.js";
 
 export const newsRouter = express();
 
@@ -9,22 +9,26 @@ newsRouter.get("/news", async (req, res) => {
     const quantidade = Number(query.quantidade);
     const offset = pagina * quantidade;
 
-
     const [results] = await db.query("SELECT * FROM news LIMIT ? OFFSET ?", [quantidade, offset]);
     return res.status(200).json(results);
 
   } catch (error) {
     console.log(error);
-    
+
   }
 });
 
 newsRouter.get("/news/:id"), async (req, res) => {
-  const [results] = await db.query(
-    "SELECT * FROM news WHERE id = ? ",
-    [req.params.id]
-  );
-  res.send(results)
+  try {
+    const [results] = await db.query(
+      "SELECT * FROM news WHERE id_news = ? ",
+      [req.params.id]
+    );
+    res.send(results)
+  } catch (error) {
+    console.log(error);
+
+  }
 }
 
 newsRouter.post("/news", async (req, res) => {
@@ -36,7 +40,7 @@ newsRouter.post("/news", async (req, res) => {
     );
 
     const [newsCriado] = await db.query(
-      "Select * From news where id=?",
+      "Select * From news where id_news=?",
       results.insertId
     )
 
@@ -44,5 +48,18 @@ newsRouter.post("/news", async (req, res) => {
 
   } catch (error) {
     console.log(error)
+  }
+});
+
+newsRouter.delete("/news/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const [results] = await pool.query(
+      "DELETE FROM news WHERE  id_news= ?",
+      id
+    );
+    res.status(200).send("Noticia deletado!", results);
+  } catch (error) {
+    console.log(error);
   }
 });
