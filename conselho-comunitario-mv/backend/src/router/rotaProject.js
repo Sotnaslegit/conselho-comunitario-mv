@@ -49,7 +49,7 @@ router.put('/projects/:id'), async (req, res) => {
 
         res.json({ id, nome, description });
     } catch (err) {
-        console.error('Erro ao atualizar projeto:', err);
+        console.error('Erro ao atualizar projeto:', err);''
         res.status(500).json({ error: 'Erro no servidor ao atualizar projeto' });
     }
 }
@@ -62,6 +62,10 @@ router.delete('/projects/:id', async (req, res) => {
     try {
         const [result] = await db.query(
             'DELETE FROM projects WHERE id = ?',
-            [id]
-    
+            [id] 
+        );
+    } catch {
+        res.status(500).json({ error: 'Erro no servidor ao deletar projeto' });
+        console.error('Erro ao deletar projeto:', err)
+    }
 });
