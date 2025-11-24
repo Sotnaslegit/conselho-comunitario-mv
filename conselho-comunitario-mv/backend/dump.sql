@@ -18,11 +18,10 @@ CREATE TABLE news (
     
     FOREIGN KEY (id_user)
     REFERENCES `user` (id_user)
-)
+);
 
 CREATE TABLE projeto (
     id_projeto INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(150),
-    `description` TEXT,
+    `description` TEXT
 );
-
