@@ -9,12 +9,13 @@
     }
 }
 
-.navbar .nav-link {
+a {
     color: #333;
     transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 }
 
-.navbar .nav-link:hover {
+a {
     color: #fff !important;
     transform: translateY(-2px);
 }

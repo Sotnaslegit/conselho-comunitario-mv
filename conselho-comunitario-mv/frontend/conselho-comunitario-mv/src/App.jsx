@@ -8,13 +8,27 @@ import AboutUs from './components/AboutUs/AboutUs'
 import NewsPage from './components/NewsPage/NewsPage'
 import ProjectsPage from './components/ProjectsPage/ProjectsPage'
 import Hall from './components/Hall/Hall'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+
 
 function App() {
   return (
     <>
-      <BarNav/>
-      <Hall/>
-      <FooterBar/>
+    <Router>
+        <BarNav />
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/ProjectsPage" element={<ProjectsPage />} />
+          <Route path="/Hall" element={<Hall />} />
+          <Route path="/NewsPage" element={<NewsPage />} />
+        </Routes>
+
+        <FooterBar/>
+      </Router>
+
     </>
   )
 }
