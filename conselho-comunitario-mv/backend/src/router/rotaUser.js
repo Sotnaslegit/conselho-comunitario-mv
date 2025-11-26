@@ -76,8 +76,8 @@ app.put('/usuarios/:id', async (req, res) => {
       const { id } = req.params
       const { body} = req
   
-      const [results] = await pool.query(
-          'UPDATE usuario SET `nome` = ?, `idade` = ? WHERE id = ?', [body.nome, body.idade, id]
+      const [results] = await db.query(
+          'UPDATE user SET `name` = ?, `password` = ? WHERE id_user = ?', [body.name, body.password, id]
       );
       res.status(200).send('Usuario atualizado', results)
   } catch (error) {
