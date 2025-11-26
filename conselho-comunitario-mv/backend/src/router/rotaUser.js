@@ -71,3 +71,16 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
+app.put('/usuarios/:id', async (req, res) => {
+  try {
+      const { id } = req.params
+      const { body} = req
+  
+      const [results] = await pool.query(
+          'UPDATE usuario SET `nome` = ?, `idade` = ? WHERE id = ?', [body.nome, body.idade, id]
+      );
+      res.status(200).send('Usuario atualizado', results)
+  } catch (error) {
+      console.log(error)
+  };
+});
