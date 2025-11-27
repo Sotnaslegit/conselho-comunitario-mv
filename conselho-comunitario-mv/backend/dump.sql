@@ -20,7 +20,7 @@ CREATE TABLE news (
 );
 
 CREATE TABLE projects (
-    id_projeto INT PRIMARY KEY AUTO_INCREMENT,
+    id_projects INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(150),
     `description` TEXT
 );
