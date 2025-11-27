@@ -71,7 +71,11 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 userRouter.put('/usuarios/:id', async (req, res) => {
+=======
+app.put('/usuarios/:id', async (req, res) => {
+>>>>>>> ccde41f8fa32dc0b873308aafc1eb440dfe4e36b
   try {
       const { id } = req.params
       const { body} = req
