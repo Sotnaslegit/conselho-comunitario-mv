@@ -1,12 +1,26 @@
-const express = require('express');
-const router = express.Router();
-const db = require('../config/db');
+import express from 'express'
+import { db } from '../config/db.js'
 
+export const projectRouter = express.Router()
 
 //GET
-router.get('/projects', async (req, res) => {
+projectRouter.get('/projects', async (req, res) => {
     try {
-        const [rows] = await db.query('SELECT id, nome, description FROM projects');
+        const [rows] = await db.query('SELECT * FROM projects');
+        console.log(rows);
+        
+        res.json(rows);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: 'erro no servidor' })
+    }
+});
+//GET POR ID
+projectRouter.get('/projects/:id', async (req, res) => {
+    const {id} = req.params
+    try {
+        const [rows] = await db.query('SELECT * FROM projects WHERE id_projects = ?', id);
+        console.log(rows);
         res.json(rows);
     } catch (err) {
         console.log(err);
@@ -15,7 +29,7 @@ router.get('/projects', async (req, res) => {
 });
 
 // POST - adicionar novos projetos
-router.post('/projects', async (req, res) => {
+projectRouter.post('/projects', async (req, res) => {
     const { nome, description } = req.body;
 
     try {
@@ -33,35 +47,28 @@ router.post('/projects', async (req, res) => {
 
 //put - atualizar projetos
 
-router.put('/projects/:id'), async (req, res) => {
-    const { id } = req.params;
-    const { nome, description } = req.body;
-
+projectRouter.put('/projects/:id', async (req, res) => {
     try {
-        const [result] = await db.query(
-            'UPDATE projects SET nome = ?, description = ? WHERE id = ?',
-            [nome, description, id]
+        const { id } = req.params
+        const { body } = req
+    
+        const [results] = await db.query(
+            'UPDATE projects SET `nome` = ?, `description` = ? WHERE id_projects = ?', [body.nome, body.description, id]
         );
-
-        if (result.affectedRows === 0) {
-            return res.status(404).json({ error: 'Projeto não encontrado' });
-        }
-
-        res.json({ id, nome, description });
-    } catch (err) {
-        console.error('Erro ao atualizar projeto:', err);''
-        res.status(500).json({ error: 'Erro no servidor ao atualizar projeto' });
-    }
-}
+        res.status(200).send('Projeto atualizado', results)
+    } catch (error) {
+        console.log(error)
+    };
+  });
 
 //
 // DELETE - deletar projetos
-router.delete('/projects/:id', async (req, res) => {
+projectRouter.delete('/projects/:id', async (req, res) => {
     const { id } = req.params;
 
     try {
         const [result] = await db.query(
-            'DELETE FROM projects WHERE id = ?',
+            'DELETE FROM projects WHERE id_projects = ?',
             [id] 
         );
     } catch {

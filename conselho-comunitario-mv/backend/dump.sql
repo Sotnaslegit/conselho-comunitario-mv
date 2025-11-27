@@ -19,7 +19,7 @@ CREATE TABLE news (
     REFERENCES `user` (id_user)
 );
 
-CREATE TABLE projeto (
+CREATE TABLE projects (
     id_projeto INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(150),
     `description` TEXT
