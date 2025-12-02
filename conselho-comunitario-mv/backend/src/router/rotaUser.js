@@ -1,21 +1,25 @@
 import express from 'express'
 import { db } from '../config/db.js'
+import * as userController from '../controllers/controllerUser.js'
 
 export const userRouter = express()
+
+userRouter.get('/usuarios/:id', userController.getByIdC)
 
 userRouter.get("/usuarios", async (req, res) => {
   const [results] = await db.query("SELECT * FROM user");
   res.send(results);
 });
 
-userRouter.get("/usuarios/:id", async (req, res) => {
-  const { id } = req.params;
-  const [results] = await db.query(
-    "SELECT * FROM user WHERE id_user=?",
-    id
-  );
-  res.send(results);
-});
+// userRouter.get("/usuarios/:id", async (req, res) => {
+//   const { id } = req.params;
+//   const [results] = await db.query(
+//     "SELECT * FROM user WHERE id_user=?",
+//     id
+//   );
+//   res.send(results);
+// });
+
 
 userRouter.post("/usuarios", async (req, res) => {
   try {
@@ -71,20 +75,16 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
 userRouter.put('/usuarios/:id', async (req, res) => {
-=======
-app.put('/usuarios/:id', async (req, res) => {
->>>>>>> ccde41f8fa32dc0b873308aafc1eb440dfe4e36b
   try {
-      const { id } = req.params
-      const { body} = req
-  
-      const [results] = await db.query(
-          'UPDATE user SET `name` = ?, `password` = ? WHERE id_user = ?', [body.name, body.password, id]
-      );
-      res.status(200).send('Usuario atualizado', results)
+    const { id } = req.params
+    const { body } = req
+
+    const [results] = await db.query(
+      'UPDATE user SET `name` = ?, `password` = ? WHERE id_user = ?', [body.name, body.password, id]
+    );
+    res.status(200).send('Usuario atualizado', results)
   } catch (error) {
-      console.log(error)
+    console.log(error)
   };
 });
