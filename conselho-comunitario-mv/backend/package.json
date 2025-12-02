@@ -2,6 +2,20 @@
   "dependencies": {
     "cors": "^2.8.5",
     "cypress": "^15.6.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
     "mysql2": "^3.15.3"
-  }
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
