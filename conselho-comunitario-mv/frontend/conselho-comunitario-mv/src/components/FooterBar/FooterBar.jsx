@@ -13,7 +13,7 @@ const FooterBar = () => {
                     <div className="container mb-6 d-flex justify-content-around flex-column">
                         <div style={{display: "flex", gap: "50px", "flexDirection": "column", "margin": "0 auto"}}>
                             <div className="container mb-6 -flex">
-                                <h5>Redes Sociais</h5>
+                                <h5 className='secondary-font'>Redes Sociais</h5>
                                 <div className="social-icons">
                                     <div className="d-flex">
                                         <a href="https://w.app/xocq7k"><img src={whatsapp} alt="" /></a>
@@ -23,14 +23,14 @@ const FooterBar = () => {
                                 </div>
                             </div>
                             <div className="container mb-6">
-                                <h5>Fale Conosco:</h5>
+                                <h5 className='secondary-font'>Fale Conosco:</h5>
                                 <div className="ctt">
                                     <label><img src={call} alt="" /></label>
-                                    <p>48 98501-5251</p>
+                                    <p className='primary-font'>48 98501-5251</p>
                                 </div>
                                 <div className="ctt">
                                     <label><img src={email} alt="" /> </label>
-                                    <p>ccmv.adm@gmail.com</p>
+                                    <p className='primary-font'>ccmv.adm@gmail.com</p>
                                 </div>
                             </div>
                         </div>

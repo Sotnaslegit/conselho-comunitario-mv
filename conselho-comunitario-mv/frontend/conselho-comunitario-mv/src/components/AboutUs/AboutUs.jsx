@@ -8,8 +8,8 @@ const AboutUs = () => {
         <>
             <div className="container">
                 <div className="col-md-12 text-center">
-                    <h2 className="primary-font">SOBRE NÓS</h2>
-                    <p className="secondary-font">Em 15/04/1981, o Centro Comunitário do Monte Verde é
+                    <h2 className='primary-font'>SOBRE NÓS</h2>
+                    <p className='secondary-font'>Em 15/04/1981, o Centro Comunitário do Monte Verde é
                         fundado pelo morador Osni Ferreira. O projeto que nasceu
                         com o intuíto de auxiliar os moradores hoje conta com maisde 11 mil participantes e mais de 10
                         projetos
@@ -29,7 +29,7 @@ const AboutUs = () => {
 
                 <div className="col-md-12 text-center">
 
-                    <p className="secondary-font">Atualmente o projeto possui parcerias diversas buscando
+                    <p className='secondary-font'>Atualmente o projeto possui parcerias diversas buscando
                         atender o maior número de grupos - desde crianças até
                         idosos. Também dispomos de um amplo salão de eventos,
                         salas para atividades, quadras e campo de

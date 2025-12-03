@@ -22,5 +22,17 @@ CREATE TABLE news (
 CREATE TABLE projects (
     id_projects INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(150),
-    `description` TEXT
+    dias VARCHAR(100),
+    hora_inicio INT,
+    hora_fim INT,
+    localizacao VARCHAR(150),
+    publico_alvo VARCHAR(100),
+    forma_pagamento VARCHAR(100),
+    responsavel VARCHAR(100),
+    numero VARCHAR(20),
+    instagram VARCHAR(100),
+    id_user INT,
+    
+    FOREIGN KEY (id_user)
+    REFERENCES `user` (id_user)
 );

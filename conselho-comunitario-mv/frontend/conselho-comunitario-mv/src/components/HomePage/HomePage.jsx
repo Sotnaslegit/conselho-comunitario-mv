@@ -11,8 +11,8 @@ const HomePage = () => {
 
             <div className="container text-center">
                 <div className="mb-5">
-                    <h6 className='fw-bold primary-font'>Aqui você vai encontrar:</h6>
-                    <p>
+                    <h3 className='primary-font'>Aqui você vai encontrar:</h3>
+                    <p className='secondary-font'>
                         <br />
                         Projetos gratuitos ou a preço popular — pra toda comunidade!
                         Notícias sobre bairro

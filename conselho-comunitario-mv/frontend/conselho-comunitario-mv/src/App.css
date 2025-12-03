@@ -7,15 +7,9 @@
 }
 
 .primary-font{
-    font-family: "Raleway", sans-serif; 
-    font-size: 30px;
+    font-family: "Raleway", sans-serif !important; 
 }
 
-p{
-    font-family: "Montserrat", sans-serif;
-    font-size: large;
-}
-
-h5{
-    font-family: "Raleway", sans-serif; 
+.secondary-font{
+    font-family: "Montserrat", sans-serif !important;
 }

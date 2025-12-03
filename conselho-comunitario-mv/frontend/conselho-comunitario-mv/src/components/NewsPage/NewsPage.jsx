@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import './NewsPage.css'
 
 const NewsPage = () => {
     const [card, setCard] = useState([])
@@ -18,14 +19,16 @@ const NewsPage = () => {
     }, [])
     return (
         <>
-            <h1 class="text-center">NOTÍCIAS</h1>
-            <div class="container d-flex justify-content-center align-items-center">
-                {card.map((item, index) => (
-                    <div className="card" key={index}>
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
-                    </div>
-                ))}
+            <h1 class="text-center mb-4">NOTÍCIAS</h1>
+            <div class="container">
+                <div className="row d-flex justify-content-between">
+                    {card.map((item, index) => (
+                        <div className="cardNews mb-5" key={index}>
+                            <h2>{item.title}</h2>
+                            <p>{item.description}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     )
