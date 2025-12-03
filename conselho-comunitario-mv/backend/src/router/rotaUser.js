@@ -4,54 +4,11 @@ import * as userController from '../controllers/controllerUser.js'
 
 export const userRouter = express()
 
-userRouter.get('/usuarios/:id', userController.getByIdC)
-
-userRouter.get("/usuarios", async (req, res) => {
-  const [results] = await db.query("SELECT * FROM user");
-  res.send(results);
-});
-
-// userRouter.get("/usuarios/:id", async (req, res) => {
-//   const { id } = req.params;
-//   const [results] = await db.query(
-//     "SELECT * FROM user WHERE id_user=?",
-//     id
-//   );
-//   res.send(results);
-// });
-
-
-userRouter.post("/usuarios", async (req, res) => {
-  try {
-    const { body } = req;
-    const [results] = await db.query(
-      "INSERT INTO user (name, password) VALUES (?,?)",
-      [body.name, body.password]
-    );
-
-    const [usuarioCriado] = await db.query(
-      "Select * from user WHERE id_user=?",
-      results.insertId
-    );
-
-    return res.status(201).json(usuarioCriado);
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-userRouter.delete("/usuarios/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const [results] = await db.query(
-      "DELETE FROM user WHERE id_user=?",
-      id
-    );
-    res.status(200).send("Usuário deletado!", results);
-  } catch (error) {
-    console.log(error);
-  }
-});
+userRouter.get('/usuarios/:id', userController.getById)
+userRouter.get('/usuarios', userController.getAll)
+userRouter.post('/usuarios', userController.postUser)
+userRouter.delete('/usuarios', userController.deleteUser)
+userRouter.post('/login', userController.loginUser)
 
 userRouter.post("/login", async (req, res) => {
   try {
