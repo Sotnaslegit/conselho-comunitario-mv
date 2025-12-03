@@ -1,3 +1,4 @@
+import { json } from "express";
 import { db } from "../config/db.js";
 
 export const getById = async (id) => {
@@ -32,7 +33,7 @@ export const deleteUser = async (id)=>{
             id
         )
 
-        return 
+        return ("Usuario deletado")
     } catch (error) {
         return error
     }
@@ -40,23 +41,31 @@ export const deleteUser = async (id)=>{
 }
 
 export const loginUser = async (body)=>{
-    try {
-        const { body } = req;
-    
+    try {    
         const [usuario] = await db.query(
-          "Select * from user WHERE name=? and password=?",
+          "SELECT * FROM user WHERE name=? and password=?",
           [body.name, body.password]
         );
-    
+        console.log(body);
+        
         if (usuario.length > 0) {
-          return res.status(200).json({
-            message: "Usuario logado",
-            dados: usuario,
-          });
+          return ("Usuario logado");
         } else {
-          return res.status(404).send("Nome ou senha errados!");
+        
+          return ("Nome ou senha incorretos!");
         }
       } catch (error) {
         console.log(error);
       }
 }
+
+export const atualizaUser = async (id, body) => {
+  try {
+    const [results] = await db.query(
+      'UPDATE user SET `name` = ?, `password` = ? WHERE id_user = ?', [body.name, body.password, id]
+    );
+    return ('Usuario atualizado', results)
+  } catch (error) {
+    console.log(error)
+  };
+};

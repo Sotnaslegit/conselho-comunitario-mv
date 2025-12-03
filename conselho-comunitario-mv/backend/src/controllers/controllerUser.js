@@ -18,7 +18,7 @@ export const getAll = async(req, res) => {
 
 export const postUser = async (req, res) => {
     try {
-        const body = parseInt(req.body)
+        const body = req.body
         await serviceUser.postUser(body)
         
         res.send("admin criado")
@@ -30,6 +30,8 @@ export const postUser = async (req, res) => {
 export const deleteUser = async (req, res) => {
     try {
         const id = parseInt(req.params.id)
+        console.log(id);
+        
         await serviceUser.deleteUser(id)
         
         res.send("admin deletado")
@@ -40,10 +42,24 @@ export const deleteUser = async (req, res) => {
 
 export const loginUser = async (req, res) => {
     try {
-        const body = parseInt(req.body)
+        const { body } = (req)
+        
         const results = await serviceUser.loginUser(body)
         
-        res.json()
+        console.log(results);
+        
+        res.json(results)
+    } catch (error) {
+        console.log(error);
+    }
+}
+export const atualizaUser = async (req, res) => {
+    try {
+        const {id} = parseInt(req.params)
+        const body = parseInt(req.body)
+        const results = await serviceUser.atualizaUser(id, body)
+        
+        res.json(results)
     } catch (error) {
         console.log(error);
     }
