@@ -1,6 +1,5 @@
 import { db } from "../config/db.js";
 
-
 export const getAll = async()=>{
     const [results] = await db.query(
         "SELECT * FROM user"

@@ -4,8 +4,11 @@ import * as controllerNews from '../controllers/controllerNews.js'
 export const newsRouter = express();
 
 userRouter.get('/news', controllerNews.paginacaoNews)
+
 userRouter.get('/news/:id', controllerNews.getIdNews)
+
 userRouter.post('/news', controllerNews.postNews)
+
 userRouter.delete('/news/:id', controllerNews.deleteNews)
 
 

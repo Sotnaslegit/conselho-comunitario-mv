@@ -1,7 +1,7 @@
 import express from 'express'
-import { db } from '../config/db.js'
+import * as controllerProject from '../controllers/controllerProject.js'
 
-export const projectRouter = express.Router()
+export const projectRouter = express()
 
 //GET
 projectRouter.get('/projects', async (req, res) => {
