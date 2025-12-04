@@ -1,4 +1,3 @@
-import './Hall.css'
 import salao from '../../assets/salao.jpg'
 import palco from '../../assets/palco.jpg'
 import cooler from '../../assets/cooler.jpg'
@@ -60,12 +59,12 @@ const Hall = () => {
                         </div>
                     </div>
 
-                    <p className=" mb-2 mt-5 secondary-font'">
+                    <p className="mt-5 secondary-font'">
                         Espaço amplo e climatizado, ideal para aniversários, casamentos, formaturas e eventos corporativos.
                         Capacidade para até 100 pessoas, com cozinha equipada, banheiros, estacionamento e área externa.
                         Local de fácil acesso e seguro.
                     </p>
-                    <p className='secondary-font'>
+                    <p className='secondary-font text-center'>
                         <strong>Informações e reservas pelo WhatsApp:</strong><a href="https://wa.me/5548985015251?text=Ol%C3%A1!%20Vim%20pelo%20site%20CCMV%20e%20gostaria%20de%20exclarecer%20algumas%20d%C3%BAvidas..."> (48) 98501-5251</a>
                     </p>
                 </div>

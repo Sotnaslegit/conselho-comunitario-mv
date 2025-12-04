@@ -19,13 +19,13 @@ const NewsPage = () => {
     }, [])
     return (
         <>
-            <h1 class="text-center mb-4">NOTÍCIAS</h1>
+            <h1 class="text-center primary-font mb-4">NOTÍCIAS</h1>
             <div class="container">
                 <div className="row d-flex justify-content-between">
                     {card.map((item, index) => (
                         <div className="cardNews mb-5" key={index}>
-                            <h2>{item.title}</h2>
-                            <p>{item.description}</p>
+                            <h2 className="primary-font">{item.title}</h2>
+                            <p className="secondary-font">{item.description}</p>
                         </div>
                     ))}
                 </div>

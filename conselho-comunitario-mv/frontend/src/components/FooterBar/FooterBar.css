@@ -2,11 +2,6 @@
   background-color: #339a73;
   color: white;
 
-  h5,
-  h6 {
-    font-weight: bold;
-  }
-
   a {
     color: white;
     margin-right: 10px;
@@ -48,5 +43,8 @@
 @media (max-width:768px) {
   .footer {
     flex-direction: column;
+    iframe{
+      display: none;
+    }
   }
 }

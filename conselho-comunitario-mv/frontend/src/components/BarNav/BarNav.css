@@ -15,9 +15,8 @@ a {
     text-decoration: none;
 }
 
-a {
+a:hover {
     color: #fff !important;
-    transform: translateY(-2px);
 }
 
 
@@ -36,9 +35,17 @@ a {
     }
 
     .navbar {
-        .collapse {
-
-            justify-content: start;
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        };
+        a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }

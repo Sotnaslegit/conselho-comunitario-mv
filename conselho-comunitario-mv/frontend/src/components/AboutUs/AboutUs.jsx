@@ -1,6 +1,4 @@
-import './AboutUs.css'
 import ccmv from '../../assets/ccmv.JPG'
-import alongamento from '../../assets/alongamento.JPG'
 import campoCima from '../../assets/campo-cima.JPG'
 
 const AboutUs = () => {
@@ -8,7 +6,7 @@ const AboutUs = () => {
         <>
             <div className="container">
                 <div className="col-md-12 text-center">
-                    <h2 className='primary-font'>SOBRE NÓS</h2>
+                    <h1 className='primary-font mb-4'>SOBRE NÓS</h1>
                     <p className='secondary-font'>Em 15/04/1981, o Centro Comunitário do Monte Verde é
                         fundado pelo morador Osni Ferreira. O projeto que nasceu
                         com o intuíto de auxiliar os moradores hoje conta com maisde 11 mil participantes e mais de 10

@@ -14,10 +14,6 @@ const BarNav = () => {
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         <img src={logoIcon} alt="logo" width={"100px"} />
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
 
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
@@ -25,7 +21,7 @@ const BarNav = () => {
                                     <Link to = '/HomePage'><img className="navIcon" src={home} alt="" />INÍCIO</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to = '/AboutUs'><img className="navIcon" src={sobreNos} alt="" />SOBRE NÓS</Link>
+                                    <Link to = '/NewsPage'><img className="navIcon" src={megaphone} alt="" />NOTÍCIAS</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to = '/ProjectsPage'><img className="navIcon" src={fitness} alt="" />PROJETOS</Link>
@@ -34,7 +30,7 @@ const BarNav = () => {
                                     <Link to='/Hall'> <img className="navIcon" src={salao} alt="" />SALÃO</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to = '/NewsPage'><img className="navIcon" src={megaphone} alt="" />NOTÍCIAS</Link>
+                                    <Link to = '/AboutUs'><img className="navIcon" src={sobreNos} alt="" />SOBRE NÓS</Link>
                                 </li>
                             </ul>
                         </div>
