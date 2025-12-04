@@ -1,5 +1,12 @@
-import { json } from "express";
 import { db } from "../config/db.js";
+
+
+export const getAll = async()=>{
+    const [results] = await db.query(
+        "SELECT * FROM user"
+    )
+    return results
+}
 
 export const getById = async (id) => {
     const [results] = await db.query(
@@ -7,13 +14,6 @@ export const getById = async (id) => {
         id
     );
     
-    return results
-}
-
-export const getAll = async()=>{
-    const [results] = await db.query(
-        "SELECT * FROM user"
-    )
     return results
 }
 
