@@ -17,7 +17,7 @@ export const paginacaoNews = async (req, res) => {
 export const getIdNews = async (req, res) => {
     try {
         const id = parseInt(req.params.id)
-        const results = await serviceUser.getIdNews(id)
+        const results = await serviceNews.getIdNews(id)
 
         res.json(results)
     } catch (error) {
@@ -39,7 +39,7 @@ export const postNews = async (req, res) => {
 export const deleteNews = async (req, res) => {
     try {
         const id = parseInt(req.params.id)
-        const results = await serviceUser.deleteNews(id)
+        const results = await serviceNews.deleteNews(id)
 
         res.json(results)
     } catch (error) {

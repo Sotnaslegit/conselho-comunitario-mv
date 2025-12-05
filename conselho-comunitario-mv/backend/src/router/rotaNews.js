@@ -3,13 +3,13 @@ import * as controllerNews from '../controllers/controllerNews.js'
 
 export const newsRouter = express();
 
-userRouter.get('/news', controllerNews.paginacaoNews)
+newsRouter.get('/news', controllerNews.paginacaoNews)
 
-userRouter.get('/news/:id', controllerNews.getIdNews)
+newsRouter.get('/news/:id', controllerNews.getIdNews)
 
-userRouter.post('/news', controllerNews.postNews)
+newsRouter.post('/news', controllerNews.postNews)
 
-userRouter.delete('/news/:id', controllerNews.deleteNews)
+newsRouter.delete('/news/:id', controllerNews.deleteNews)
 
 
 // newsRouter.delete("/news/:id", async (req, res) => {
