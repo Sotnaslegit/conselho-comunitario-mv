@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel Administrativo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="modal.css" />
+</head>
+<body>
+
+  <div class="container py-5">
+
+        <img src="/WhatsApp Image 2025-06-18 at 18.56.41.svg" alt="">
+
+    <header class="mb-5 text-center">
+      <h1 class="fw-bold">Painel Administrativo</h1>
+      <p class="text-muted fs-5">Gerencie projetos e notícias rapidamente</p>
+    </header>
+
+    <div class="row justify-content-center mb-4">
+      <div class="col-auto d-flex gap-3">
+        <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#modalProjeto">
+          Novo Projeto
+        </button>
+        <button class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalNoticia">
+          Nova Notícia
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="modalProjeto" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Novo Projeto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label" for="nomeProjeto">Nome do Projeto:</label>
+              <input type="text" id="nomeProjeto" name="nome" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="diasProjeto">Dias (Ex: Seg, Qua, Sex):</label>
+              <input type="text" id="diasProjeto" name="dias" class="form-control" />
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="horaInicio">Hora de Início:</label>
+                <input type="time" id="horaInicio" name="hora_inicio" class="form-control" />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="horaFim">Hora de Fim:</label>
+                <input type="time" id="horaFim" name="hora_fim" class="form-control" />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="localizacaoProjeto">Localização:</label>
+              <input type="text" id="localizacaoProjeto" name="localizacao" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="publicoAlvo">Público Alvo:</label>
+              <input type="text" id="publicoAlvo" name="publico_alvo" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="formaPagamento">Forma de Pagamento:</label>
+              <select id="formaPagamento" name="forma_pagamento" class="form-select">
+                <option value="">Selecione a Forma</option>
+                <option value="Gratuito">Gratuito</option>
+                <option value="PIX">PIX</option>
+                <option value="Cartao">Cartão</option>
+                <option value="Boleto">Boleto</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="responsavelProjeto">Nome do Responsável:</label>
+              <input type="text" id="responsavelProjeto" name="responsavel" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="numeroResponsavel">Número de Contato (WhatsApp):</label>
+              <input type="tel" id="numeroResponsavel" name="numero" class="form-control" placeholder="(xx) xxxxx-xxxx" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="instagramProjeto">Instagram (Usuário ou Link):</label>
+              <input type="text" id="instagramProjeto" name="instagram" class="form-control" placeholder="@usuario_projeto" />
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="submit" form="formProjeto" class="btn btn-primary">Salvar Projeto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalNoticia" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Nova Notícia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label" for="tituloNoticia">Título:</label>
+              <input type="text" id="tituloNoticia" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="descricaoNoticia">Descrição:</label>
+              <textarea id="descricaoNoticia" class="form-control" rows="3"></textarea>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
