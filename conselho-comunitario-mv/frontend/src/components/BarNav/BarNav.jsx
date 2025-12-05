@@ -21,6 +21,9 @@ const BarNav = () => {
                                     <Link to = '/HomePage'><img className="navIcon" src={home} alt="" />INÍCIO</Link>
                                 </li>
                                 <li className="nav-item">
+                                    <Link to = '/AboutUs'><img className="navIcon" src={sobreNos} alt="" />SOBRE NÓS</Link>
+                                </li>
+                                <li className="nav-item">
                                     <Link to = '/NewsPage'><img className="navIcon" src={megaphone} alt="" />NOTÍCIAS</Link>
                                 </li>
                                 <li className="nav-item">
@@ -28,9 +31,6 @@ const BarNav = () => {
                                 </li>
                                 <li className="nav-item">
                                     <Link to='/Hall'> <img className="navIcon" src={salao} alt="" />SALÃO</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to = '/AboutUs'><img className="navIcon" src={sobreNos} alt="" />SOBRE NÓS</Link>
                                 </li>
                             </ul>
                         </div>

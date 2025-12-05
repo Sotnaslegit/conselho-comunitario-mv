@@ -6,7 +6,7 @@ export const projectRouter = express.Router()
 //GET
 projectRouter.get('/projects', async (req, res) => {
     try {
-        const [rows] = await db.query('SELECT * FROM projects');
+        const [rows] = await db.query('SELECT * FROM project');
         console.log(rows);
         
         res.json(rows);
@@ -19,7 +19,7 @@ projectRouter.get('/projects', async (req, res) => {
 projectRouter.get('/projects/:id', async (req, res) => {
     const {id} = req.params
     try {
-        const [rows] = await db.query('SELECT * FROM projects WHERE id_projects = ?', id);
+        const [rows] = await db.query('SELECT * FROM project WHERE id_project = ?', id);
         console.log(rows);
         res.json(rows);
     } catch (err) {

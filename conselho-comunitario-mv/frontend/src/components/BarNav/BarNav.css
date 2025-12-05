@@ -2,6 +2,7 @@
     background-color: #66CC96;
     margin-bottom: 5%;
     box-shadow: #00000031 0 3px 10px;
+    font-size: 20px;
 
     .collapse {
         display: flex;
@@ -39,13 +40,15 @@ a:hover {
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 15px;
+
             text-align: center;
         };
         a{
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-size: 10px;
+            padding: 0 3px 0 3px;
         }
     }
 }
