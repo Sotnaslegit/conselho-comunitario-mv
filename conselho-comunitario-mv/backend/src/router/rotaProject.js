@@ -1,78 +1,14 @@
 import express from 'express'
-import { db } from '../config/db.js'
+import * as controllerProject from '../controllers/controllerProject.js'
 
-export const projectRouter = express.Router()
+export const projectRouter = express()
 
-//GET
-projectRouter.get('/projects', async (req, res) => {
-    try {
-        const [rows] = await db.query('SELECT * FROM project');
-        console.log(rows);
-        
-        res.json(rows);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({ error: 'erro no servidor' })
-    }
-});
-//GET POR ID
-projectRouter.get('/projects/:id', async (req, res) => {
-    const {id} = req.params
-    try {
-        const [rows] = await db.query('SELECT * FROM project WHERE id_project = ?', id);
-        console.log(rows);
-        res.json(rows);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({ error: 'erro no servidor' })
-    }
-});
+projectRouter.get('/projects', controllerProject.getProject)
 
-// POST - adicionar novos projetos
-projectRouter.post('/projects', async (req, res) => {
-    const { nome, description } = req.body;
+projectRouter.get('/projects/:id', controllerProject.getIdProject)
 
-    try {
-        const [result] = await db.query(
-            'INSERT INTO projects (nome, description) VALUES (?, ?)',
-            [nome, description]
-        );
-        console.log('Projeto realizado com sucesso:', { id: result.insertId, nome, description });
-        res.status(201).json({ id: result.insertId, nome, description });
-    } catch (err) {
-        console.error('Erro ao inserir projeto:', err);
-        res.status(500).json({ error: 'Erro no servidor ao inserir projeto' });
-    }
-});
+projectRouter.post('/projects', controllerProject.postProject)
 
-//put - atualizar projetos
+projectRouter.put('/projects/:id', controllerProject.putProject)
 
-projectRouter.put('/projects/:id', async (req, res) => {
-    try {
-        const { id } = req.params
-        const { body } = req
-    
-        const [results] = await db.query(
-            'UPDATE projects SET `nome` = ?, `description` = ? WHERE id_projects = ?', [body.nome, body.description, id]
-        );
-        res.status(200).send('Projeto atualizado', results)
-    } catch (error) {
-        console.log(error)
-    };
-  });
-
-//
-// DELETE - deletar projetos
-projectRouter.delete('/projects/:id', async (req, res) => {
-    const { id } = req.params;
-
-    try {
-        const [result] = await db.query(
-            'DELETE FROM projects WHERE id_projects = ?',
-            [id] 
-        );
-    } catch {
-        res.status(500).json({ error: 'Erro no servidor ao deletar projeto' });
-        console.error('Erro ao deletar projeto:', err)
-    }
-});
+projectRouter.delete('/projects/:id', controllerProject.deleteProject)

@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #339a73, #0e5e41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.login-container {
+    background: #f5eeeedd;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(94, 255, 142, 0.523);
+    width: 320px;
+    text-align: center;
+}
+
+
+.login-container h2 {
+    color: #1b5e20;
+}
+
+
+.input-box {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4caf50;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    
+}
+
+
+/* Botão */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #2e7d32;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1b5e20;
+}
+
+/* Registro */
+.register {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register a {
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container img {
+    width: 115px;  
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
