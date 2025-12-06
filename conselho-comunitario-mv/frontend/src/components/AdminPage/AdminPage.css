@@ -1,16 +1,5 @@
-body {
-    background: linear-gradient(135deg, #339a73, #0e5e41);
-    color: #fff;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
-  
-  h1, p {
-    color: #242424;
-  }
-  
-  .btn-primary {
+
+   .btn-primary {
     background-color: #4ba564;
     border: none;
     transition: background-color 0.3s ease;

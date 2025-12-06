@@ -41,6 +41,7 @@ export const deleteUser = async (id)=>{
 
 export const loginUser = async (body)=>{
     try {    
+      console.log(body)
         const [usuario] = await db.query(
           "SELECT * FROM user WHERE name=? and password=?",
           [body.name, body.password]
@@ -48,7 +49,7 @@ export const loginUser = async (body)=>{
         console.log(body);
         
         if (usuario.length > 0) {
-          return ("Usuario logado");
+          return (usuario);
         } else {
         
           return ("Nome ou senha incorretos!");

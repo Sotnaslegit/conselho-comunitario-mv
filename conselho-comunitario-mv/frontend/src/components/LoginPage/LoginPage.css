@@ -1,13 +1,3 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #339a73, #0e5e41);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 /* Container */
 .login-container {
     background: #f5eeeedd;
@@ -39,24 +29,6 @@ body {
     font-size: 16px;
     background: transparent;
     
-}
-
-
-/* Botão */
-.btn {
-    width: 100%;
-    padding: 12px;
-    background: #2e7d32;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #1b5e20;
 }
 
 /* Registro */

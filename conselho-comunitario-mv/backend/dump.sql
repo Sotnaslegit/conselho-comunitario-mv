@@ -10,7 +10,7 @@ CREATE TABLE `user` (
 
 CREATE TABLE news (
 	id_news INT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(100),
+    title VARCHAR(100) UNIQUE,
     `description` TEXT,
     posted DATE DEFAULT (CURRENT_DATE),
     id_user INT,
@@ -21,7 +21,7 @@ CREATE TABLE news (
 
 CREATE TABLE project (
     id_project INT PRIMARY KEY AUTO_INCREMENT,
-    `name` VARCHAR(150),
+    `name` VARCHAR(150) UNIQUE,
     `days` VARCHAR(100),
     `start` INT,
     `end` INT,
@@ -42,7 +42,7 @@ INSERT INTO `user`(`name`, `password`) VALUES ('admin', 'admin');
 
 -- PROJETOS
 INSERT INTO project(`name`, `days`, `start`, `end`, `location`, public, payment, responsible, phone, instagram, id_user) VALUES
-('Jiu Jitsu', 'Segunda à quinta', '19', '22', 'Sala em frente á secretaria do Centro Comunitário Monte Verde II', 'Crianças, jovens e Adultos', 'Direto com o professor', 'Fabiano', '48 99844-4332', '', '1'),
+('Jiu Jitsu', 'Segunda à quinta', '19', '22', 'Sala em frente á secretaria do Centro Comunitário Monte Verde II', 'Crianças, jovens e adultos', 'Direto com o professor', 'Fabiano', '48 99844-4332', '', '1'),
 ('Projeto Formiguinha', 'Segunda à quinta', '14', '17', 'Antiga portaria policial da dona Onil Ferreira', '', 'Gratuito', 'Ângela', '49 98418-7701', 'formiguinhas.mv', '1'),
 ('Bingo', 'Terças', '13', '17', 'Salão do Centro Comunitário Monte Verde', '', 'Gratuito', 'Dona Maria Castilho', '48 99115-9253', '', '1'),
 ('Capoeira', 'Terças e Quintas', '19', '22', 'Salão do Centro Comunitário Monte Verde', '', 'Gratuito', 'Mestre Dan', '48 99152-7069', '', '1'),

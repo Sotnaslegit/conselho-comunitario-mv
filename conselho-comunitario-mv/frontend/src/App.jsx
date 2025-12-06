@@ -9,6 +9,8 @@ import AboutUs from './components/AboutUs/AboutUs'
 import NewsPage from './components/NewsPage/NewsPage'
 import ProjectsPage from './components/ProjectsPage/ProjectsPage'
 import Hall from './components/Hall/Hall'
+import AdminPage from './components/AdminPage/AdminPage'
+import LoginPage from './components/LoginPage/LoginPage';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 
@@ -20,11 +22,13 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/HomePage" element={<HomePage />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/ProjectsPage" element={<ProjectsPage />} />
-          <Route path="/Hall" element={<Hall />} />
-          <Route path="/NewsPage" element={<NewsPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/hall" element={<Hall />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
 
         <FooterBar/>

@@ -18,19 +18,19 @@ const BarNav = () => {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link to = '/HomePage'><img className="navIcon" src={home} alt="" />INÍCIO</Link>
+                                    <Link to = '/home'><img className="navIcon" src={home} alt="" />INÍCIO</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to = '/AboutUs'><img className="navIcon" src={sobreNos} alt="" />SOBRE NÓS</Link>
+                                    <Link to = '/aboutus'><img className="navIcon" src={sobreNos} alt="" />SOBRE NÓS</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to = '/NewsPage'><img className="navIcon" src={megaphone} alt="" />NOTÍCIAS</Link>
+                                    <Link to = '/news'><img className="navIcon" src={megaphone} alt="" />NOTÍCIAS</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to = '/ProjectsPage'><img className="navIcon" src={fitness} alt="" />PROJETOS</Link>
+                                    <Link to = '/projects'><img className="navIcon" src={fitness} alt="" />PROJETOS</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/Hall'> <img className="navIcon" src={salao} alt="" />SALÃO</Link>
+                                    <Link to='/hall'> <img className="navIcon" src={salao} alt="" />SALÃO</Link>
                                 </li>
                             </ul>
                         </div>

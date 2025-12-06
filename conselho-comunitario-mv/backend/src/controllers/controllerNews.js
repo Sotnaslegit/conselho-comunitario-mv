@@ -2,6 +2,7 @@ import * as serviceNews from "../service/serviceNews.js"
 
 export const paginacaoNews = async (req, res) => {
     try {
+        const {query} = req
         const pagina = Number(query.pagina) - 1;
         const quantidade = Number(query.quantidade);
         const offset = pagina * quantidade;
