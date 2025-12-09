@@ -25,13 +25,17 @@ export const getIdNews = async (id) => {
 
 export const postNews = async (body) => {
     try {
-        const [results] = await db.query(
-            "INSERT INTO news (title, description) VALUES (?,?)",
-            [body.title, body.description]
-          );
-      
-          return "Noticia criada"
-      
+        if (body !== null) {
+            const [results] = await db.query(
+                "INSERT INTO news (title, description) VALUES (?,?)",
+                [body.title, body.description]
+            );
+
+            return "Noticia criada"
+        } else {
+            return "Insira titulo e descrição "
+        }
+
     } catch (error) {
         console.log(error);
     }
@@ -42,9 +46,9 @@ export const deleteNews = async (id) => {
         const [results] = await pool.query(
             "DELETE FROM news WHERE id_news= ?",
             id
-          );
+        );
 
-          return("Noticia deletado!");
+        return ("Noticia deletado!");
     } catch (error) {
         console.log(error);
     }
