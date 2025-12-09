@@ -23,8 +23,8 @@ export const getIdProject = async (id) => {
 export const postProject = async (body) => {
     try {
         const [result] = await db.query(
-            'INSERT INTO project (nome, description) VALUES (?, ?)',
-            [body.name, body.description]
+            'INSERT INTO project(name, days, start, end, location, public, payment, responsible, phone, instagram) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            [body.name, body.days, body.start, body.end, body.location, body.publico, body.payment, body.responsible, body.phone, body.instagram]
         );
 
         return ("Projeto criado")

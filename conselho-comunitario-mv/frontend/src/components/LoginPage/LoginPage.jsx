@@ -22,7 +22,7 @@ const LoginPage = () => {
             localStorage.setItem("usuario", JSON.stringify(data))
             navigate("/admin")
         } catch (error) {
-
+            console.log(error)
         }
     }
 
