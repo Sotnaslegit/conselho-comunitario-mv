@@ -12,7 +12,7 @@ export const paginacaoNews = async (quantidade, offset) => {
 export const getIdNews = async (id) => {
     try {
         const [results] = await db.query(
-            "SELECT * FROM user WHERE id_user=?",
+            "SELECT * FROM news WHERE id_news=?",
             id
         );
 
