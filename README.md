@@ -19,7 +19,7 @@ Ainda vamos continuar com o trabalho mesmo após o término da avaliação, ent�
 
 [Igor Silva Schmitz](https://github.com/Paadrou)
 
-[Prince Ronald da Silva Baptiste](https://github.com/princeronald192)
+[Oliver Juan Rodrigues](https://github.com/OliverJuan1)
 
 ### 🌟 | Dê uma estrelinha
 É de graça :D
