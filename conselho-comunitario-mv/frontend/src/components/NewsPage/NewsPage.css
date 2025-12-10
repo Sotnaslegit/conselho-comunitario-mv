@@ -1,0 +1,35 @@
+h1{
+  text-align: center;
+}
+
+.cardNews {
+  background-color: #66CC96;
+  width: 45%;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 px;
+  h2{
+    text-align: center;
+  }
+  p{
+    margin-bottom: 0;
+    text-align: start;
+  }
+}
+
+.cardNews:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pagination{
+  text-align: center;
+  font-weight: bold;
+  padding: 7px;
+  background-color: #419267 !important;
+  margin: 5px;
+  border: none;
+  color: white !important;
+}

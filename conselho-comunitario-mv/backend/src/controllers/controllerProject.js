@@ -23,7 +23,7 @@ export const getIdProject = async(req, res) => {
 
 export const postProject = async(req, res) => {
     try {
-        const body = req
+        const {body} = req
         await serviceProject.postProject(body)
 
         res.send("Projeto criado")
@@ -36,10 +36,11 @@ export const postProject = async(req, res) => {
 export const putProject = async(req, res) => {
     try {
         const id = parseInt(req.params.id)
-        const body = req
+        const {body} = req
         await serviceProject.putProject(id, body)
 
-        res.send("Projeto criado")
+        const [updated] = await db.query('SELECT * FROM project WHERE id_project = ?', [id]);
+        return updated[0];
     } catch (error) {
         console.log(error);
         

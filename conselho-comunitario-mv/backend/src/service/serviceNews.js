@@ -43,7 +43,7 @@ export const postNews = async (body) => {
 
 export const deleteNews = async (id) => {
     try {
-        const [results] = await pool.query(
+        const [results] = await db.query(
             "DELETE FROM news WHERE id_news= ?",
             id
         );

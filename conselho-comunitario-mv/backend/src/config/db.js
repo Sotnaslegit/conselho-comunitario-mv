@@ -6,4 +6,3 @@ export const db = await mysql.createConnection({
     password:"senai",
     database:"db_mv"
 })
-

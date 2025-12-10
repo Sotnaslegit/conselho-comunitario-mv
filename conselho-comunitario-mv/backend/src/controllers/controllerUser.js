@@ -42,8 +42,9 @@ export const deleteUser = async (req, res) => {
 
 export const loginUser = async (req, res) => {
     try {
-        const { body } = (req)
+        const { body } = req
         
+        console.log(body)
         const results = await serviceUser.loginUser(body)
         
         console.log(results);
