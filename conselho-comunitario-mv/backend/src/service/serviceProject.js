@@ -48,7 +48,7 @@ export const putProject = async (id, body) => {
 export const deleteProject = async (id) => {
     try {
         const [result] = await db.query(
-            'DELETE FROM projects WHERE id_projects = ?',
+            'DELETE FROM project WHERE id_projects = ?',
             id 
         );
 

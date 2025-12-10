@@ -8,7 +8,7 @@ import email from '../../assets/icons/email.svg'
 const FooterBar = () => {
     return (
         <>
-            <div className="footer">
+            <div className="footer mt-4">
                 <div className="container-fluid d-flex justify-content-around">
                     <div className="container mb-6 d-flex justify-content-around flex-column">
                         <div style={{display: "flex", gap: "50px", "flexDirection": "column", "margin": "0 auto"}}>

@@ -28,19 +28,21 @@ const LoginPage = () => {
 
     return (
         <>
-            <div class="login-container">
-                <img src={logoCCMV} alt="" />
-                <h2>Login</h2>
-                <div class="input-box">
-                    <input type="text" onChange={(e) => setName(e.target.value)} required placeholder="Usuario" />
+            <div className="container d-flex align-items-center justify-content-center">
+                <div class="login-container">
+                    <img src={logoCCMV} alt="" />
+                    <h2>Login</h2>
+                    <div class="input-box">
+                        <input type="text" onChange={(e) => setName(e.target.value)} required placeholder="Usuario" />
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" required onChange={(e) => setPassword(e.target.value)} placeholder="Senha" />
+                    </div>
+
+                    <button onClick={login} class="btn">Entrar</button>
+
                 </div>
-
-                <div class="input-box">
-                    <input type="password" required onChange={(e) => setPassword(e.target.value)} placeholder="Senha" />
-                </div>
-
-                <button onClick={login} class="btn">Entrar</button>
-
             </div>
         </>
     )
