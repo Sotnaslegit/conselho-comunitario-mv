@@ -9,4 +9,6 @@ newsRouter.get('/news/:id', controllerNews.getIdNews)
 
 newsRouter.post('/news', controllerNews.postNews)
 
+newsRouter.put('/news/:id', controllerNews.atualizaNews)
+
 newsRouter.delete('/news/:id', controllerNews.deleteNews)

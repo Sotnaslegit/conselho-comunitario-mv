@@ -37,6 +37,17 @@ export const postNews = async (req, res) => {
     }
 }
 
+export const atualizaNews = async (req, res) => {
+    try {
+        const id = req.params.id
+        const body = req.body
+        const results = await serviceNews.atualizaNews(id, body)
+
+        res.json(results)
+    } catch (error) {
+        console.log(error);
+    }
+}
 export const deleteNews = async (req, res) => {
     try {
         const id = parseInt(req.params.id)
