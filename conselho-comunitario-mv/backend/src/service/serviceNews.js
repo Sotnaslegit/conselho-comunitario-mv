@@ -41,7 +41,7 @@ export const postNews = async (body) => {
     }
 }
 
-export const atualizadoNews = async (id, body) => {
+export const atualizaNews = async (id, body) => {
     try {
         const [results] = await db.query(
             'UPDATE news SET `title`= ?, description = ? WHERE id_news = ?',
