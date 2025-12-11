@@ -1,7 +1,7 @@
 import './LoginPage.css'
 import logoCCMV from '../../assets/icons/logoCCMV.svg'
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const LoginPage = () => {
     const [name, setName] = useState();
@@ -25,6 +25,11 @@ const LoginPage = () => {
             console.log(error)
         }
     }
+    useEffect(() => {
+        if (localStorage.getItem("usuario") !== null) {
+            navigate('/admin')
+        }
+    })
 
     return (
         <>
