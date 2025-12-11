@@ -44,10 +44,10 @@ export const postNews = async (body) => {
 export const atualizaNews = async (id, body) => {
     try {
         const [results] = await db.query(
-            'UPDATE news SET `title`= ?, description = ? WHERE id_news = ?',
+            'UPDATE news SET `title`= ?, `description` = ? WHERE id_news = ?',
             [body.title, body.description, id]
         );
-        return ("Noticia atualizado")
+        return (results)
     } catch (error) {
         console.log(error);
     }

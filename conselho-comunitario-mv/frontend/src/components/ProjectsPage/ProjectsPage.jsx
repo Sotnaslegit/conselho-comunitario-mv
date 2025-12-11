@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './ProjectsPage.css';
@@ -13,17 +13,14 @@ const ProjectsPage = () => {
     const [showEdit, setShowEdit] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
-    // Fetch inicial
     useEffect(() => {
         fetch("http://localhost:3000/projects")
             .then(res => res.json())
             .then(data => setCard(data))
             .catch(err => console.log(err));
-
         if (localStorage.getItem("usuario")) setIsAdmin(true);
     }, []);
 
-    // ================= MODAL ADD =================
     function AddProjectModal({ onAdd, ...props }) {
         const [form, setForm] = useState({
             name: "", days: "", start: "", end: "", location: "",
@@ -40,8 +37,8 @@ const ProjectsPage = () => {
                     body: JSON.stringify(form)
                 });
                 const newProject = await res.json();
-                onAdd(newProject); // adiciona ao estado
-                props.onHide();    // fecha modal
+                onAdd(newProject);
+                props.onHide();
             } catch (error) {
                 console.log(error);
             }
@@ -51,15 +48,17 @@ const ProjectsPage = () => {
             <Modal {...props} size="lg" centered>
                 <Modal.Header closeButton><Modal.Title>Adicionar Projeto</Modal.Title></Modal.Header>
                 <Modal.Body>
-                    {Object.keys(form).map(key => (
-                        <input
-                            key={key}
-                            className="form-control my-2"
-                            name={key}
-                            value={form[key]}
-                            placeholder={key}
-                            onChange={handleChange}
-                        />
+                    {Object.keys(form).map((key) => (
+                        <div key={key}>
+                            <h6>{key}: {form[key]}</h6>
+                            <input
+                                className="form-control my-2"
+                                name={key}
+                                value={form[key]}
+                                placeholder={key}
+                                onChange={handleChange}
+                            />
+                        </div>
                     ))}
                 </Modal.Body>
                 <Modal.Footer>
@@ -69,7 +68,6 @@ const ProjectsPage = () => {
         );
     }
 
-    // ================= MODAL EDIT =================
     function EditProjectModal({ project, onEdit, ...props }) {
         const [form, setForm] = useState({});
 
@@ -87,8 +85,8 @@ const ProjectsPage = () => {
                     body: JSON.stringify(form)
                 });
                 const updatedProject = await res.json();
-                onEdit(updatedProject); // atualiza lista
-                props.onHide();         // fecha modal
+                onEdit(updatedProject);
+                props.onHide();
             } catch (error) {
                 console.log(error);
             }
@@ -98,14 +96,16 @@ const ProjectsPage = () => {
             <Modal {...props} size="lg" centered>
                 <Modal.Header closeButton><Modal.Title>Editar Projeto</Modal.Title></Modal.Header>
                 <Modal.Body>
-                    {Object.keys(form).map(key => (
-                        <input
-                            key={key}
-                            className="form-control my-2"
-                            name={key}
-                            value={form[key] || ""}
-                            onChange={handleChange}
-                        />
+                    {Object.keys(form).map((key) => (
+                        <div key={key}>
+                            <h6>{key}: {form[key]}</h6>
+                            <input
+                                className="form-control my-2"
+                                name={key}
+                                value={form[key] || ""}
+                                onChange={handleChange}
+                            />
+                        </div>
                     ))}
                 </Modal.Body>
                 <Modal.Footer>
@@ -115,7 +115,6 @@ const ProjectsPage = () => {
         );
     }
 
-    // ================= DELETE =================
     const deletar = async (id_project) => {
         try {
             await fetch(`http://localhost:3000/projects/${id_project}`, { method: "DELETE" });
@@ -128,7 +127,6 @@ const ProjectsPage = () => {
     return (
         <>
             <h1 className="primary-font">PROJETOS</h1>
-
             <div className="container mt-4">
                 {isAdmin && (
                     <div className="container d-flex justify-content-center mb-3">
@@ -137,7 +135,6 @@ const ProjectsPage = () => {
                         </button>
                     </div>
                 )}
-
                 <div className="row d-flex justify-content-between">
                     {card.map((item) => (
                         <div className="card mb-5" key={item.id_project}>
@@ -150,47 +147,20 @@ const ProjectsPage = () => {
                             <p><b>Contatos:</b></p>
                             {item.phone && <p><img src={call} /> {item.phone}</p>}
                             {item.instagram && <p><img src={instagram} /> {item.instagram}</p>}
-
                             {isAdmin && (
                                 <div className="d-flex justify-content-between mt-4">
-                                    <button
-                                        className="btn btn-warning"
-                                        onClick={() => {
-                                            setSelectedProject(item);
-                                            setShowEdit(true);
-                                        }}
-                                    >
-                                        Editar
-                                    </button>
-                                    <button
-                                        className="btn btn-danger"
-                                        onClick={() => deletar(item.id_project)}
-                                    >
-                                        Deletar
-                                    </button>
+                                    <button className="btn btn-warning" onClick={() => { setSelectedProject(item); setShowEdit(true); }}>Editar</button>
+                                    <button className="btn btn-danger" onClick={() => deletar(item.id_project)}>Deletar</button>
                                 </div>
                             )}
                         </div>
                     ))}
                 </div>
             </div>
-
-            <AddProjectModal
-                show={showAdd}
-                onHide={() => setShowAdd(false)}
-                onAdd={(newProject) => setCard(prev => [...prev, newProject])}
-            />
-
-            <EditProjectModal
-                show={showEdit}
-                onHide={() => setShowEdit(false)}
-                project={selectedProject}
-                onEdit={(updatedProject) =>
-                    setCard(prev => prev.map(item =>
-                        item.id_project === updatedProject.id_project ? updatedProject : item
-                    ))
-                }
-            />
+            <AddProjectModal show={showAdd} onHide={() => setShowAdd(false)} onAdd={(newProject) => setCard(prev => [...prev, newProject])} />
+            <EditProjectModal show={showEdit} onHide={() => setShowEdit(false)} project={selectedProject} onEdit={(updatedProject) =>
+                setCard(prev => prev.map(item => item.id_project === updatedProject.id_project ? updatedProject : item))
+            } />
         </>
     );
 };
